@@ -1,0 +1,5 @@
+{
+  "name": "Phishing Detector",
+  "description": "An advanced phishing detection dashboard that utilizes AI-driven URL heuristics, domain reputation analysis, and SSL/DNS signals to identify and explain malicious links.",
+  "requestFramePermissions": []
+}
