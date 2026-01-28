@@ -3,7 +3,9 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { ScanResult } from "../types";
 
 export const analyzeUrlWithAI = async (url: string): Promise<ScanResult> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  // Cast to string to avoid 'undefined' type errors during tsc build
+  const apiKey = process.env.API_KEY as string;
+  const ai = new GoogleGenAI({ apiKey });
   
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
